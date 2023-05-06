@@ -1,0 +1,182 @@
+@media (min-width: 769px) {
+    
+}
+.formulario {
+    width: 600px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em .2em;
+    margin: 5% auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    box-shadow: 0 0 0 15%;
+}
+
+.formulario h1{
+    font-family: Montserrat, sans-serif;
+    padding: 1em 0;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.formulario h3{
+    padding: 1em 0;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.labelCadastro {
+    display: flex;
+    font-size: 16px;
+    color: #000000;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 2em;
+    padding: 5px 0;
+}
+
+.labelCadastro input {
+    width: 380px;
+    height: 2em;
+    border: none;
+    border-bottom: .5px solid #d9d9d9;
+}
+
+.labelCadastro input:focus {
+    border: none;
+    border-bottom: .5px solid #d9d9d9;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2em 0;
+}
+
+button {
+    font-family: Roboto, sans-serif;
+    width: 250px;
+    height: 52px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #0f0f0f;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.botaoCadastrar span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.botaoCadastrar span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+button:hover span {
+padding-right: 25px;
+}
+
+button:hover span:after{
+    opacity: 1;
+    right: 0;
+}
+
+.desabilitado, button:disabled{
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.botaoCancelar {
+    display: flex;
+    width: 250px;
+    height: 52px;
+    border: 1px solid #0f0f0f;
+    border-radius: 3px;
+    color: #0f0f0f;
+    background-color: #fff;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.botaoCancelar:hover {
+    background-color: #f0f0f0;
+    transition: .1s;
+}
+
+@media (max-width: 768px){
+    
+    div.formulario {
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        margin: 1em auto;
+    }
+    
+    h1.tituloFormulario {
+        font-size: 1rem;
+        width: 90%;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+    }
+
+    h3.secaoFormulario {
+        font-size: .8rem;
+        width: 90%;
+        margin: 0;
+        padding: 20px 0;
+        text-transform: uppercase;
+    }
+    
+    .conteudoFormulario {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        padding: 0 0 0 4em;
+    }
+    
+    .labelCadastro label {
+        font-size: 1.1rem;
+    }
+    
+    .labelCadastro input {
+        width: 85%;
+        height: 2.5em;
+        border: none;
+        border-bottom: .5px solid #d9d9d9;
+    }
+
+    .botaoCadastrar:after, .botaoCadastrar span:after, button:hover span{
+        font-size: .9rem;
+        content: none;
+        padding: 0;        
+    }
+
+    }

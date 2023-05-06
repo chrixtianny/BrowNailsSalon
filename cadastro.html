@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brow&Nails - TESTE</title>
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/cabecalho.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
+    
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho-titulo"><a href= index.html><img alt="Logo Brow&Nails" class="cabecalho-imagem" src="assets/img/logo-header.png"></a></h1>
+        <nav class="cabecalho-nav">
+          <ul class="cabecalho-links">
+            <li><a href="index.html" class="links-topo">Home</a></li>
+            <li><a href="cadastro.html" class="links-topo">Cadastro</a></li>
+            <li><a href="contato.html" class="links-topo">Contato</a></li>
+          </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="formulario">
+        <form class="conteudoFormulario">
+          <h1 class="tituloFormulario">Cadastro de cliente</h1>
+          <h3 class="secaoFormulario">Informações básicas</h3>
+          <span class="labelCadastro">
+            <label for="nomeCompleto">Nome completo</label>
+            <input type="text" data-tipo="nome" name="nome" id="nomeCompleto" required>
+          </span>
+          <span class="labelCadastro">
+            <label for="email">E-mail</label>
+            <input type="email" data-tipo="email" name="email" id="email" required placeholder="seuemail@email.com">
+          </span>
+          <span class="labelCadastro">
+            <label for="senha">Senha</label>
+            <input type="password" data-tipo="senha" name="senha" id="senha">
+          </span>
+          <h3 class="secaoFormulario">Informações pessoais</h3>
+          <span class="labelCadastro">
+            <label for="documento">CPF</label>
+            <input type="text" name="documento" id="documento" data-tipo="cpf" required>
+          </span>
+          <span class="labelCadastro">
+            <label for="telefoneCelular">Telefone</label>
+            <input type="tel" name="telefone" id="telefoneCelular" placeholder="(82) 99999-9999" required minlength="9999999999">
+          </span>
+          <span class="labelCadastro">
+            <label for="dataNascimento">Data de nascimento</label>
+            <input type="date" name="data" id="dataNascimento" data-tipo="dataNascimento" required>
+          </span>
+          <h3 class="secaoFormulario">Endereço</h3>
+          <span class="labelCadastro">
+            <label for="cep">CEP</label>
+            <input type="text" name="cep" id="cep" required>
+          </span>
+          <span class="labelCadastro">
+            <label for="rua">Rua</label>
+            <input type="text" name="rua" id="rua" required>
+          </span>
+          <span class="labelCadastro">
+            <label for="numero">Número</label>
+            <input type="text" name="numero" id="numero" required>
+          </span>
+          <span class="labelCadastro">
+            <label for="complemento">Complemento</label>
+            <input type="text" name="complemento" id="complemento">
+          </span>
+          <span class="labelCadastro">
+            <label for="bairro">Bairro</label>
+            <input type="text" name="bairro" id="bairro" required>
+          </span>
+          <span class="labelCadastro">
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade" id="cidade" required>
+          </span>
+        </form>
+        <div class="botoes">
+          <a href="index.html" class="botaoCancelar"><span>Cancelar</span></a>
+          <button type="submit" class="botaoCadastrar"><span>Enviar cadastro</span></button>
+        </div>
+      </div>
+    </main>
+    <footer class="rodape">
+      <img src="assets/img/logo-footer.png" class="rodape-imagem">
+    </footer>
+    <script src="./assets/js/validacao.js"></script>
+</body>
+</html>

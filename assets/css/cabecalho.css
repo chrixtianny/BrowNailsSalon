@@ -1,0 +1,109 @@
+@media (min-width: 769px){
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 4em 2em;
+    }
+    h1 .cabecalho-imagem {
+        display: flex;
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    ul.cabecalho-links {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+    li {
+        display: flex;
+        flex-direction: row;
+        width: 8rem;
+        height: 1em;
+        justify-content: space-around;
+        color: inherit;
+        border: .5px solid rgba(41, 2, 2, 0.801);
+        border-radius: 1px;
+        padding: 1em 0;
+        text-transform: uppercase;
+        margin: 0 1rem;
+        text-decoration: none;
+    }
+
+    .links-topo {
+        text-decoration: none;
+        text-transform: uppercase;
+        color:black;
+
+    }
+
+}
+@media (max-width:768px) {
+    
+    header {
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        margin: none;
+        padding: none;
+    }
+
+    header.cabecalho {
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        position: relative;
+    }
+    
+    h1 .cabecalho-imagem {
+        display: block;
+        width: 20em;
+        margin: 0 auto;
+    }
+    .cabecalho-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 80%;
+        height: fit-content;
+        padding: 1rem;
+        margin: 0 auto;
+        font-size: 1.2rem;
+        text-decoration-color: black;
+    }
+    .cabecalho-links {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: fit-content;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .links-topo {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border: .5px solid rgba(41, 2, 2, 0.801);
+        padding: 0;
+        margin: .5rem 0;
+        width: 15rem;
+        height: 2rem;
+        text-align: center;
+        color: black;
+        text-transform: uppercase;
+
+    }
+
+}
