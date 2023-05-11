@@ -6,7 +6,7 @@
         justify-content: space-around;
         padding: 4em 2em;
     }
-    h1 .cabecalho-imagem {
+    img.cabecalho-imagem {
         display: flex;
         position: relative;
         width: 80%;
@@ -62,10 +62,14 @@
         position: relative;
     }
     
-    h1 .cabecalho-imagem {
-        display: block;
-        width: 20em;
+    img.cabecalho-imagem {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        max-width: 250px;
+        width: 85%;
         margin: 0 auto;
+        padding: 20px 10px;
     }
     .cabecalho-nav{
         display: flex;
@@ -106,4 +110,11 @@
 
     }
 
+}
+
+@media screen and (max-width: 290px) {
+    .cabecalho-imagem{
+        max-width: 200px;
+    }
+    
 }
