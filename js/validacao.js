@@ -1,19 +1,57 @@
-//usando data set
 
-export function valida(input){
-    const tipoDeInput = input.dataset.tipo;
-
-    if (validadores[tipoDeInput]){
-        validadores[tipoDeInput](input);
+const inputCEP = document.querySelector('#cep');
+inputCEP.addEventListener('input', function(){
+    const cep = inputCEP.value.replace(/\D/g, '');
+    if(cep.length > 8){
+        inputCEP.value = inputCEP.value.slice(0, -1);
+        return;
     }
+    if(cep.length < 8){
+        return;
+    }
+    if(cep.length == 8){
+        if(cep.length == 8){
+            buscaCEP(cep);
+        }
+    }
+})
 
-    if(input.validity.valid){
-        input.parentElement.classList.remove('input-container--invalido')
-        input.parentElement.querySelector('.input-mensagem-erro').innerHTML = '';
-    } else {
-        input.parentElement.classList.add('input-container--invalido');
-        input.parentElement.querySelector('.input-mensagem-erro').innerHTML = mostrarMensagemErro(tipoDeInput, input);
+function buscaCEP(cep){
+    const api = 'https://viacep.com.br/ws/'+ cep +'/json/';
+    const options = {
+        method: 'GET',
+        mode: 'cors',
+        headers: {
+            'content-type': 'application/json;charset=utf-8'
+        }
+    }
+    
+    fetch(api, options).then(
+        response => response.json()
+    ).then(
+        data => {
+            if(data.erro){
+                inputCEP.setCustomValidity('CEP não encontrado');
+                return;
+            }
+            inputCEP.setCustomValidity('');
+            preencheCamposComCEP(data);
+            return;
+        }
+    )
 }
+
+function preencheCamposComCEP(data){
+    const inputRua = document.querySelector('#rua');
+    const inputBairro = document.querySelector('#bairro');
+    const inputCidade = document.querySelector('#cidade');
+    const inputCep = document.querySelector('#cep');
+    inputRua.value = data.logradouro;
+    inputBairro.value = data.bairro;
+    inputCidade.value = data.localidade;
+    inputCep.value = data.cep; 
+}
+
 
 const tiposDeErro = [
     'valueMissing',
@@ -45,14 +83,13 @@ const validadores = {
     dataNascimento:input => validaDataNascimento(input)            
 }
 
-}
 
 
-/*const inputData = document.querySelector('#dataNascimento');
+
+const inputData = document.querySelector('#dataNascimento');
 inputData.addEventListener('blur', (evento) => {
     validaDataNascimento(inputData)
-}
-);*/
+});
 
 function mostrarMensagemErro(tipoDeInput, input){
     let mensagem = '';
@@ -84,22 +121,21 @@ function maiorDeIdade(data){
     return dataMais18 <= dataAtual;
 }
 
-const inputCPF = document.querySelector('#cpf')
+//Validar CPF
+const inputCPF = document.querySelector('#documentocpf');
 
 inputCPF.addEventListener('blur', (evento) => {
-
-    validarCPF(inputCPF)
+    validarCPF(evento.target);
 });
 
-
 function validarCPF(input){
-    const cpfFormatado = input.value.replace(/\D/g, '')
-    let mensagem = ''
+    const cpfFormatado = input.value.replace(/\D/g, '');
+    let mensagem = '';
     if (!ChecaCPFRepetido(cpfFormatado) || !validarEstruturaCPF(cpfFormatado)){
         mensagem = "o CPF informado não é válido";
     }
 
-    input.setCustomValidity(mensagem)
+    input.setCustomValidity(mensagem);
 }
 
 function ChecaCPFRepetido(cpf){
@@ -128,9 +164,9 @@ function ChecaCPFRepetido(cpf){
 }
     
 function validarEstruturaCPF(cpf){
-    const multiplicador = 10
+    const multiplicador = 10;
 
-    return checaDigitoVerificador(cpf, multiplicador)
+    return checaDigitoVerificador(cpf, multiplicador);
 }
 
 function checaDigitoVerificador(cpf, multiplicador){
@@ -143,7 +179,7 @@ function checaDigitoVerificador(cpf, multiplicador){
     const cpfSemDigitos = cpf.substr(0, multiplicador - 1).split('');
     const digitoVerificador = cpf.charAt(multiplicador - 1);
     for(let contador = 0; multiplicadorInicial > 1; multiplicadorInicial--){
-        soma = soma + cpfSemDigitos[contador] * multiplicadorInicial
+        soma = soma + cpfSemDigitos[contador] * multiplicadorInicial;
         contador++
     }
 
