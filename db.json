@@ -1,19 +1,21 @@
 {
-  "posts": [
+  "usuarios": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "nome": "Christianny Santos",
+      "email": "chrisksds@gmail.com",
+      "senha": "1234",
+      "cpf": "11111111122",
+      "telefone": "82996970464",
+      "dataNascimento": "2000-01-01",
+      "endereco": {
+        "cep": "57045-838",
+        "rua": "Rua São Francisco",
+        "numero": "1504",
+        "complemento": "",
+        "bairro": "Ouro Preto",
+        "cidade": "Maceió"
+      },
+      "id": 23
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

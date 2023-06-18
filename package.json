@@ -1,0 +1,16 @@
+{
+  "name": "bns",
+  "version": "1.0.0",
+  "description": "mock up",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "chrixtianny <christianny@live.com>",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  },
+  "repository": "https://github.com/chrixtianny/BrowNailsSalon.git"
+}

@@ -1,0 +1,57 @@
+ul#listaUsuarios {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+  }
+  
+  .user-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+    text-align: justify;
+  }
+  
+  .user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-address {
+    display: none;
+    padding-top: 10px;
+    grid-column: span 3;
+  }
+  
+  .visible {
+    display: block;
+  }
+  
+  .action-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .edit-btn {
+    background-color: #00cc00;
+    color: #fff;
+  }
+  
+  .edit-btn:hover {
+    background-color: #009900;
+  }
+  
+  .delete-btn {
+    background-color: #ff0000;
+    color: #fff;
+  }
+  
+  .delete-btn:hover {
+    background-color: #cc0000;
+  }
+  
