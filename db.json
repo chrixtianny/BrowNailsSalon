@@ -16,6 +16,23 @@
         "cidade": "Maceió"
       },
       "id": 23
+    },
+    {
+      "nome": "rafaelo",
+      "email": "rafa@rafa.rafa",
+      "senha": "rafa",
+      "cpf": "09009989011",
+      "telefone": "988888888",
+      "dataNascimento": "1558-02-23",
+      "endereco": {
+        "cep": "57010-050",
+        "rua": "Rua Álvaro Marinho",
+        "numero": "44",
+        "complemento": "",
+        "bairro": "Prado",
+        "cidade": "Maceió"
+      },
+      "id": 24
     }
   ]
 }
