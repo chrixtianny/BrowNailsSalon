@@ -1,38 +1,49 @@
 {
   "usuarios": [
     {
-      "nome": "Christianny Santos",
-      "email": "chrisksds@gmail.com",
-      "senha": "1234",
-      "cpf": "11111111122",
-      "telefone": "82996970464",
-      "dataNascimento": "2000-01-01",
+      "nome": "chriso",
+      "email": "c@c.c",
+      "cpf": "1111111111",
+      "telefone": "",
       "endereco": {
-        "cep": "57045-838",
-        "rua": "Rua São Francisco",
-        "numero": "1504",
+        "rua": "Rua Álvaro Marinho",
+        "numero": "485",
         "complemento": "",
-        "bairro": "Ouro Preto",
-        "cidade": "Maceió"
+        "bairro": "a",
+        "cidade": "a"
       },
       "id": 23
     },
     {
       "nome": "rafaelo",
       "email": "rafa@rafa.rafa",
-      "senha": "rafa",
       "cpf": "09009989011",
-      "telefone": "988888888",
-      "dataNascimento": "1558-02-23",
+      "telefone": "8297777-7777",
+      "endereco": {
+        "rua": "Rua Álvaro Marinho",
+        "numero": "485",
+        "complemento": "",
+        "bairro": "a",
+        "cidade": "125"
+      },
+      "id": 24
+    },
+    {
+      "nome": "Chris",
+      "email": "ka@ka.ok",
+      "senha": "0000",
+      "cpf": "11111111122",
+      "telefone": "82999096331",
+      "dataNascimento": "1111-01-11",
       "endereco": {
         "cep": "57010-050",
         "rua": "Rua Álvaro Marinho",
-        "numero": "44",
+        "numero": "111",
         "complemento": "",
         "bairro": "Prado",
         "cidade": "Maceió"
       },
-      "id": 24
+      "id": 25
     }
   ]
 }
